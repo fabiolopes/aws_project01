@@ -64,7 +64,7 @@ public class ProductController {
         if(optProduct.isPresent()){
             Product product = optProduct.get();
             productRepository.delete(product);
-            productPublisher.publishProductEvent(product, EventType.PRODUCT_DELETE, "hannah");
+            productPublisher.publishProductEvent(product, EventType.PRODUCT_DELETED, "hannah");
 
             return new ResponseEntity<Product>(product, HttpStatus.OK);
         }else{
