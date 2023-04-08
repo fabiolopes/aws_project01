@@ -27,7 +27,7 @@ sourceCompatibility = '15'
 
 bootJar{
 	baseName = 'curso_aws_project01'
-	version = '1.4.0'
+	version = '1.6.0'
 }
 
 task unpack(type: Copy) {
@@ -53,6 +53,9 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	implementation 'com.amazonaws:aws-java-sdk-sns:1.11.887'
 	implementation 'com.amazonaws:aws-java-sdk-sqs:1.11.887'
+	implementation 'com.amazonaws:aws-java-sdk-s3:1.11.887'
+	implementation 'org.springframework:spring-jms:5.2.19.RELEASE'
+	implementation 'com.amazonaws:amazon-sqs-java-messaging-lib:1.0.8'
 	implementation 'org.mariadb.jdbc:mariadb-java-client:2.7.0'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
